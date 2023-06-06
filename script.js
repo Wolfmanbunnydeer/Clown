@@ -63,3 +63,27 @@ addButton.onclick = AddGame;
 addButton.innerHTML = "Add Game";
 
 document.getElementById("gamesForm").appendChild(addButton);
+
+// Add Game function
+function AddGame() {
+  var date = document.getElementById("date").value;
+  var homeTeam = document.getElementById("hometeam").value;
+  var awayTeam = document.getElementById("awayteam").value;
+  var homePoint = document.getElementById("homepoint").value;
+  var awayPoint = document.getElementById("awaypoint").value;
+
+  // Perform desired actions with the game data
+  // ...
+
+  // Clear input fields
+  document.getElementById("date").value = "";
+  document.getElementById("hometeam").value = "";
+  document.getElementById("awayteam").value = "";
+  document.getElementById("homepoint").value = "";
+  document.getElementById("awaypoint").value = "";
+}
+
+// Add event listener to the Add Game button
+var addButton = document.querySelector(".btn-primary");
+addButton.addEventListener("click", AddGame);
+
